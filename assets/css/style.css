@@ -1,0 +1,13 @@
+* {
+    font-family: Roboto;
+    color: white;
+}
+
+body {
+    background-color: #01161E;
+    height: 100vh;
+  }
+
+.hero {
+    background-color: #124559;
+}
