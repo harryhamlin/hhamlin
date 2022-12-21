@@ -1,12 +1,9 @@
 * {
     font-family: Roboto;
     color: white;
+    background-color: #01161E;
 }
 
-body {
-    background-color: #01161E;
-    height: 100vh;
-  }
 
 .hero {
     background-color: #124559;
