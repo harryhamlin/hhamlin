@@ -11,3 +11,11 @@ body {
 .hero {
     background-color: #124559;
 }
+
+a {
+    color: white;
+}
+
+#divider {
+    border-top: 3px solid #124559;
+}
