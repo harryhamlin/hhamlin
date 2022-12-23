@@ -1,25 +1,65 @@
-* {
-    font-family: Roboto;
-    color: white;
-    background-color: #01161E;
+/* 
+light blue theme
+:root {
+    --background-color: #1b4965;
+    --text-1: #5fa8d3;
+    --text-2: #cae9ff;
+    --divider-1: #62b6cb;
+    --divider-2: #bee9e8;
+} */
+
+
+/* blue orange yellow theme
+:root {
+    --background-color: #233d4d;
+    --text-1: #fe7f2d;
+    --text-2: #a1c181;
+    --divider-1: #619b8a;
+    --divider-2: #fcca46;
+} */
+
+/* blue orange theme
+:root {
+    --background-color: #293241;
+    --text-1: #98c1d9;
+    --text-2: #e0fbfc;
+    --divider-1: #ee6c4d;
+    --divider-2: #3d5a80;
+} */
+
+/* blue orange yellow theme */
+:root {
+    --background-color: #ffffff;
+    --text-1: #284b63;
+    --text-2: #353535;
+    --divider-1: #d9d9d9;
+    --divider-2: #3c6e71;
 }
 
+* {
+    font-family: Roboto;
+    color: var(--text-2);
+    background-color: var(--background-color);
+}
 
+#header {
+    color: var(--text-1)
+}
 
 .hero {
-    background-color: #124559;
+    background-color: var(--divider-1);
 }
 
 a {
-    color: white;
+    color: var(--text-2);
 }
 
 #divider {
-    border-top: 3px solid #124559;
+    border-top: 3px solid var(--divider-2);
 }
 
 #divider-small {
-    border-top: 2px solid #124559
+    border-top: 2px solid var(--divider-2);
 }
 
 /* #divider {
