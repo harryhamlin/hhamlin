@@ -5,6 +5,7 @@
 }
 
 
+
 .hero {
     background-color: #124559;
 }
@@ -16,3 +17,7 @@ a {
 #divider {
     border-top: 3px solid #124559;
 }
+
+/* #divider {
+    border: 2px solid red;
+} */
