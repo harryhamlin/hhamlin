@@ -18,6 +18,10 @@ a {
     border-top: 3px solid #124559;
 }
 
+#divider-small {
+    border-top: 2px solid #124559
+}
+
 /* #divider {
     border: 2px solid red;
 } */
