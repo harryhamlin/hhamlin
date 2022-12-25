@@ -34,12 +34,12 @@ light blue theme
     --text-2: #353535;
     --divider-1: #d9d9d9;
     --divider-2: #3c6e71;
+    background-color: var(--background-color);
 }
 
 * {
     font-family: Roboto;
     color: var(--text-2);
-    background-color: var(--background-color);
 }
 
 #header {
