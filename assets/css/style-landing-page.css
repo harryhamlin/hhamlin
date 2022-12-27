@@ -1,0 +1,277 @@
+:root {
+    --color-1: #586F7C;
+    --color-2: #14080E;
+    --color-3: #F4F4F9;
+    --color-4: #000F08;
+    --color-5: #2F4858;
+}
+
+* {
+    font-family: Roboto;
+}
+
+body {
+    background-color: var(--color-3);
+}
+
+/* this header selector sets the spacing of the header bar at the top */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-5);
+    color: var(--color-2);
+}
+
+h1 {
+    font-size: 38px;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+/* this allows the items within the nav element (list items) to be displayed as flex items */
+nav {
+    display: flex;
+}
+
+/* this selector only accesses the li items in the header nav bar */
+header li {
+    list-style: none;
+    padding: 30px;
+    padding-top: 20%;
+}
+
+/* this accesses both the anchors in the nav bar at the top as well as the contact me links at the bottom of the webpage */
+nav a {
+    text-decoration: none;
+    color: var(--color-4)
+}
+
+#resume {
+    font-size: 38px;
+    color: var(--color-4);
+    text-decoration: none;
+}
+
+/*this pseudo class lets the anchors in the header turn a specific color, different from the nav bar at the bottom of the page */
+header a:hover {
+    color: var(--color-3);
+}
+
+/*this id selector puts parameters on the buffer image below the header, with the flex parameters allowing the headshot to be put in a particular place*/
+#buffer_image {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 35px;
+    background-image: url("../images/amadablam.JPG");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+/* id selector allowing the headshot to be positioned properly*/
+#headshot {
+    position: relative;
+    height: 60%;
+    padding: .2%;
+    margin: 2%;
+    background-color: var(--color-5);
+    color: var(--color-2);
+    border-radius: 100%;
+    top: 90px;
+}
+
+/*this sets the display properties for each of the 3 sections*/
+section {
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+
+/*the 'asides' refer to each of the headings associated with each section and are adjusted later in the media queries to accomodate phones or other screens */
+aside {
+    display: inline;
+    border-right: 2px solid var(--color-4);
+    font-size: 38px;
+    width: 150px;
+    text-align: right;
+    margin-top: 1%;
+    margin-left: 150px;
+    margin-right: 4%;
+    padding-right: 2%;
+}
+
+/* Basic parameters for text section */
+summary {
+    width: 63%;
+    margin: 1%;
+    margin-top: 3%;
+    line-height: 1.2em;
+    text-align: justify;
+}
+
+/*parent elements for the project picture links */
+article {
+    display: flex;
+    width: 55%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+/*this section ensures that the link covers the entire photo*/
+article a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/*parameters for the photo links including sizes margins and borders*/
+ul {
+    height: 150px;
+    width: 350px;
+    margin: 10px;
+    border: 3px solid var(--color-1);
+    flex-grow: 2;
+}
+
+/*parameters making the first link bigger than the others */
+ul:first-child {
+    height: 300px;
+    width: 700px;
+    flex-grow: 2;
+}
+
+/*leving in this commented out photo positioning element for later adjustments if necessary*/
+/* #puppyphoto {
+    object-position: 0px px;
+} */
+
+/*makes the links turn opaque in their entirety when hovered */
+ul:hover {
+    opacity: 50%;
+    color: var(--color-3);
+}
+
+/*positioning and style for the project titles*/
+h4 {
+    display: inline-block;
+    position: relative;
+    bottom: 20%;
+    background-color: var(--color-1);
+    color: var(--color-4);
+    padding-right: 20px;
+}
+
+/*specific parameters for the links at the bottom as they differ from the nav bar at the top */
+#contactme nav li {
+    list-style: none;
+    margin: 10%;
+    margin-right: 5%;
+}
+
+#contactme nav {
+    width: 50%
+}
+
+/*changes link color to a different color than the top nav bar when hovered*/
+#contactme nav li a:hover {
+    color: var(--color-1);
+}
+
+footer {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+/* media query for slightly smaller screens allowing the picture links more neatly through adjusting other margins slightly */
+@media screen and (max-width: 1200px) {
+
+    aside {
+        margin-left: 75px;
+    }
+
+    article {
+        width: 63%;
+    }
+
+    #contactme nav {
+        flex-direction: column;
+        align-items: left;
+    }
+}
+
+/*restructuring the flex layout entirely for smaller screens (such as phones) and making everything a bit smaller for cleaner scrolling*/
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        margin: 2%;
+    }
+
+    header li {
+        list-style: none;
+        padding: 30px;
+    }
+
+    section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px
+    }
+
+    /*adjusted the available space for the project links to grow in*/
+    article {
+        align-self: center;
+        width: 63%;
+    }
+
+    ul {
+        height: 100px;
+        width: 150px;
+        margin: 10px;
+        list-style: none;
+    }
+
+    ul:first-child {
+        height: 200px;
+        width: 300px;
+        flex-grow: 2;
+    }
+
+    h4 {
+        bottom: 30%;
+    }
+
+    aside {
+        border-bottom: 2px solid var(--color-4);
+        text-align: left;
+        margin: 10px;
+        border-right: none;
+        padding: 5px;
+    }
+
+    summary {
+        width: 90%;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    #contactme nav {
+        flex-direction: column;
+        align-items: left;
+    }
+}
