@@ -65,3 +65,7 @@ a {
 /* #divider {
     border: 2px solid red;
 } */
+
+ul {
+    list-style-type: disc;
+}
